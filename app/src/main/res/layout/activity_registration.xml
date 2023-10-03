@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration.Registration"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal|center_vertical" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvRegistration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="140dp"
+                android:text="Sign Up"
+                android:textColor="#000000"
+                android:textSize="35sp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tempFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:theme="@style/TextInputLayoutStyle"
+                app:boxStrokeColor="@color/black"
+                app:hintTextAppearance="@color/black"
+                android:layout_marginTop="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawablePadding="10dp"
+                    android:hint="Full Name"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/reg_tv"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tempAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:theme="@style/TextInputLayoutStyle"
+                app:boxStrokeColor="@color/black"
+                app:hintTextAppearance="@color/black"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/reg_tv"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_location" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tempPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:theme="@style/TextInputLayoutStyle"
+                app:boxStrokeColor="@color/black"
+                app:hintTextAppearance="@color/black"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/reg_tv"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_smartphone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tempEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:theme="@style/TextInputLayoutStyle"
+                app:boxStrokeColor="@color/black"
+                app:hintTextAppearance="@color/black"
+                android:layout_marginTop="5dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    android:textColor="@color/black"
+                    android:inputType="textEmailAddress"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/reg_tv"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_email"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tempPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:theme="@style/TextInputLayoutStyle"
+                app:boxStrokeColor="@color/black"
+                app:hintTextAppearance="@color/black"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="5dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/reg_tv"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_lock"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tempMac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextInputLayoutStyle"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextAppearance="@color/black"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMACAdd"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Bluetooth MAC Address"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textAllCaps="false"
+                        android:textColorHint="@color/reg_tv"
+                        android:drawablePadding="10dp"
+                        android:drawableStart="@drawable/ic_bluetooth"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/btnFind"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_rectangle"
+                    android:text="Find"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/rounded_rectangle"
+                android:text="Create Account"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/tvLogIn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Already have an account?"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvLogIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

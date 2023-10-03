@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.hardware.bluetooth" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_covi_track"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_covi_track"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UI1">
+        <activity
+            android:name=".SelfAssessment.SelfAssessment"
+            android:exported="false" />
+        <activity
+            android:name=".SelfAssessment.ReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Introduction.PositiveInstructions"
+            android:exported="false" />
+        <activity
+            android:name=".Introduction.HighRiskInstructions"
+            android:exported="false" />
+        <activity
+            android:name=".Introduction.ModerateRiskInstructions"
+            android:exported="false" />
+        <activity
+            android:name=".Introduction.FindBlueMACAddress"
+            android:exported="false" />
+        <activity
+            android:name=".Introduction.CloseContactIntroduction"
+            android:exported="false" />
+        <activity
+            android:name=".UI.SplashScreenLogo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Registration.Login"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Privacy"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Logo"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Bluetooth"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Start"
+            android:exported="false" />
+        <activity
+            android:name=".Registration.Registration"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Home"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Stats"
+            android:exported="false" />
+        <activity
+            android:name=".SelfAssessment.SelfAssessmentHome"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Profile"
+            android:exported="false" />
+    </application>
+
+</manifest>
